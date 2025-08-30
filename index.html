@@ -3,47 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coin Shop</title>
+  <title>TikTok Coin Shop</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="shop-container">
-    <h1>Buy Coins</h1>
+  <div class="container">
+    <h1>TikTok Coins</h1>
 
-    <div class="coin-options">
-      <!-- Example coin packs -->
-      <div class="coin-box">
-        <div class="coins">30 Coins</div>
-        <div class="price">$0.34</div>
+    <!-- Coin options -->
+    <div class="coin-grid">
+      <div class="coin-box" data-coins="30" data-price="0.34">
+        <p>30 Coins</p>
+        <span>$0.34</span>
+        <button class="buy-btn">Buy</button>
+      </div>
+      <div class="coin-box" data-coins="100" data-price="1.15">
+        <p>100 Coins</p>
+        <span>$1.15</span>
+        <button class="buy-btn">Buy</button>
+      </div>
+      <div class="coin-box" data-coins="500" data-price="5.99">
+        <p>500 Coins</p>
+        <span>$5.99</span>
+        <button class="buy-btn">Buy</button>
+      </div>
+      <div class="coin-box" data-coins="1000" data-price="10.99">
+        <p>1000 Coins</p>
+        <span>$10.99</span>
         <button class="buy-btn">Buy</button>
       </div>
 
-      <div class="coin-box">
-        <div class="coins">100 Coins</div>
-        <div class="price">$1.15</div>
+      <!-- Custom Option -->
+      <div class="coin-box custom">
+        <p>Custom</p>
+        <input type="number" id="customInput" placeholder="Enter coins" />
+        <span id="customPrice">$0.00</span>
         <button class="buy-btn">Buy</button>
       </div>
+    </div>
+  </div>
 
-      <div class="coin-box">
-        <div class="coins">500 Coins</div>
-        <div class="price">$5.49</div>
-        <button class="buy-btn">Buy</button>
-      </div>
+  <!-- Add Card Modal -->
+  <div class="modal" id="cardModal">
+    <div class="modal-content">
+      <h2>Add Card</h2>
+      <input type="text" placeholder="Card Number" />
+      <input type="text" placeholder="MM/YY" />
+      <input type="text" placeholder="CVC" />
+      <button id="confirmPurchase">Confirm Purchase</button>
+      <button class="close-modal">Cancel</button>
+    </div>
+  </div>
 
-      <div class="coin-box">
-        <div class="coins">1000 Coins</div>
-        <div class="price">$10.99</div>
-        <button class="buy-btn">Buy</button>
-      </div>
-
-      <!-- Custom option -->
-      <div class="coin-box custom-box">
-        <div class="coins">Custom</div>
-        <div class="price">
-          <input type="number" id="customInput" placeholder="Enter coins" min="1">
-        </div>
-        <button class="buy-btn">Buy</button>
-      </div>
+  <!-- Success Modal -->
+  <div class="modal" id="successModal">
+    <div class="modal-content">
+      <h2>✅ Purchase Successful!</h2>
+      <p>Thank you for your purchase.</p>
+      <button class="close-modal">Close</button>
     </div>
   </div>
 
