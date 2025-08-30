@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #0f0f12;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar {
+  background: #ff0050;
+  padding: 15px;
+  text-align: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.card {
+  background: #1b1b20;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #00f2ea;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.packs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.pack {
+  background: #2a2a30;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.pack:hover {
+  border: 2px solid #00f2ea;
+}
+
+.pack img {
+  width: 40px;
+  margin-bottom: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #ff0050;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #e60046;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background: #1b1b20;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
