@@ -1,81 +1,81 @@
-body {
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: Arial, sans-serif;
-  background: #111;
-  color: #fff;
+}
+
+body {
+  background: #fff;
+  color: #222;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .shop-container {
-  background: #1c1c1c;
+  width: 100%;
+  max-width: 600px;
   padding: 20px;
-  border-radius: 15px;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
 }
 
-h1 {
+.shop-container h1 {
+  text-align: center;
   margin-bottom: 20px;
-  color: #ff0050;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .coin-options {
-  text-align: left;
-  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
-.coin-options label {
-  display: block;
-  margin-bottom: 10px;
-  cursor: pointer;
+.coin-box {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  background: #fafafa;
+  transition: all 0.2s ease;
 }
 
-#custom-input {
-  margin: 15px 0;
+.coin-box:hover {
+  border-color: #999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-#custom-input input {
-  width: 100%;
-  padding: 8px;
+.coin-box .coins {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.coin-box .price {
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.buy-btn {
+  padding: 8px 16px;
   border: none;
   border-radius: 8px;
-  outline: none;
-}
-
-.note {
-  font-size: 12px;
-  color: #aaa;
-}
-
-.total-price {
-  margin: 15px 0;
-  font-size: 18px;
-}
-
-button {
-  background: #ff0050;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 10px;
+  background: #0073ff;
+  color: #fff;
   cursor: pointer;
+  transition: background 0.2s;
+}
+
+.buy-btn:hover {
+  background: #005bd1;
+}
+
+.custom-box input {
   width: 100%;
-  font-size: 16px;
-}
-
-button:disabled {
-  background: #555;
-  cursor: not-allowed;
-}
-
-#success-message {
-  margin-top: 15px;
-  color: #0f0;
-  font-weight: bold;
-}
-.hidden {
-  display: none;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
 }
