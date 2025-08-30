@@ -1,69 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TikTok Coin Shop</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <h1>TikTok Coin Shop</h1>
-  </header>
+  <div class="shop-container">
+    <h1>💎 TikTok Coin Shop</h1>
 
-  <main class="container">
-    <!-- STEP 1: USERNAME -->
-    <section class="card">
-      <h2>Enter TikTok Username</h2>
-      <input id="username" type="text" placeholder="@username" />
-    </section>
+    <div class="coin-options">
+      <label>
+        <input type="radio" name="coins" value="70" data-price="1">
+        70 Coins - $1
+      </label>
+      <label>
+        <input type="radio" name="coins" value="350" data-price="5">
+        350 Coins - $5
+      </label>
+      <label>
+        <input type="radio" name="coins" value="700" data-price="10">
+        700 Coins - $10
+      </label>
+      <label>
+        <input type="radio" name="coins" value="custom">
+        Custom Coins
+      </label>
+    </div>
 
-    <!-- STEP 2: COIN PACKAGES -->
-    <section class="card">
-      <h2>Select Coin Package</h2>
-      <div class="packs">
-        <button class="pack" data-coins="70" data-price="1.0">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="coin" />
-          <span>70 Coins</span>
-          <strong>$1.00</strong>
-        </button>
-        <button class="pack" data-coins="350" data-price="5.0">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="coin" />
-          <span>350 Coins</span>
-          <strong>$5.00</strong>
-        </button>
-        <button class="pack" data-coins="700" data-price="10.0">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="coin" />
-          <span>700 Coins</span>
-          <strong>$10.00</strong>
-        </button>
-        <button class="pack" data-coins="1400" data-price="20.0">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="coin" />
-          <span>1400 Coins</span>
-          <strong>$20.00</strong>
-        </button>
-      </div>
-    </section>
+    <!-- Custom Input Box -->
+    <div id="custom-input" class="hidden">
+      <input type="number" id="custom-coins" placeholder="Enter number of coins">
+      <p class="note">💡 Rate: $1 = 70 Coins</p>
+    </div>
 
-    <!-- STEP 3: PAYMENT DETAILS -->
-    <section class="card">
-      <h2>Payment Details</h2>
-      <input type="text" id="cardName" placeholder="Cardholder Name" />
-      <input type="text" id="cardNumber" placeholder="Card Number" maxlength="16" />
-      <input type="text" id="cardExpiry" placeholder="MM/YY" maxlength="5" />
-      <input type="password" id="cardCvv" placeholder="CVV" maxlength="3" />
+    <div class="total-price">
+      <h2>Total: $<span id="total">0</span></h2>
+    </div>
 
-      <button id="payBtn">Pay Now</button>
-      <p id="message"></p>
-    </section>
-  </main>
+    <button id="purchaseBtn" disabled>Purchase</button>
 
-  <!-- SUCCESS POPUP -->
-  <div id="successModal" class="modal">
-    <div class="modal-content">
-      <h2>✅ Purchase Successful</h2>
-      <p>Your TikTok coins will be added shortly. (Demo only)</p>
-      <button id="closeModal">Close</button>
+    <div id="success-message" class="hidden">
+      ✅ Purchase Successful! 🎉
     </div>
   </div>
 
