@@ -1,81 +1,97 @@
-/* General reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
+  font-family: Arial, sans-serif;
   background: #fff;
-  color: #222;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-
-.shop-container {
-  width: 100%;
-  max-width: 600px;
+  margin: 0;
   padding: 20px;
+  color: #333;
 }
 
-.shop-container h1 {
+.container {
+  max-width: 900px;
+  margin: auto;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 24px;
-  font-weight: bold;
 }
 
-.coin-options {
+h1 {
+  margin-bottom: 20px;
+}
+
+.coin-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 15px;
 }
 
 .coin-box {
   border: 1px solid #ddd;
-  border-radius: 12px;
   padding: 15px;
-  text-align: center;
+  border-radius: 10px;
   background: #fafafa;
-  transition: all 0.2s ease;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
-.coin-box:hover {
-  border-color: #999;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.coin-box .coins {
-  font-size: 18px;
+.coin-box p {
   font-weight: bold;
-  margin-bottom: 8px;
+  margin: 5px 0;
 }
 
-.coin-box .price {
+.coin-box span {
+  display: block;
+  margin-bottom: 10px;
   font-size: 14px;
-  margin-bottom: 12px;
+  color: #666;
 }
 
 .buy-btn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 8px;
-  background: #0073ff;
+  background: #ff0050;
   color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: 0.2s;
 }
 
 .buy-btn:hover {
-  background: #005bd1;
+  background: #e60046;
 }
 
-.custom-box input {
+.custom input {
   width: 100%;
   padding: 6px;
+  margin-bottom: 5px;
   border: 1px solid #ccc;
-  border-radius: 6px;
+  border-radius: 5px;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.modal-content button {
+  margin-top: 10px;
 }
