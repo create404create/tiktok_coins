@@ -3,46 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TikTok Coin Shop</title>
+  <title>Coin Shop</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="shop-container">
-    <h1>💎 TikTok Coin Shop</h1>
+    <h1>Buy Coins</h1>
 
     <div class="coin-options">
-      <label>
-        <input type="radio" name="coins" value="70" data-price="1">
-        70 Coins - $1
-      </label>
-      <label>
-        <input type="radio" name="coins" value="350" data-price="5">
-        350 Coins - $5
-      </label>
-      <label>
-        <input type="radio" name="coins" value="700" data-price="10">
-        700 Coins - $10
-      </label>
-      <label>
-        <input type="radio" name="coins" value="custom">
-        Custom Coins
-      </label>
-    </div>
+      <!-- Example coin packs -->
+      <div class="coin-box">
+        <div class="coins">30 Coins</div>
+        <div class="price">$0.34</div>
+        <button class="buy-btn">Buy</button>
+      </div>
 
-    <!-- Custom Input Box -->
-    <div id="custom-input" class="hidden">
-      <input type="number" id="custom-coins" placeholder="Enter number of coins">
-      <p class="note">💡 Rate: $1 = 70 Coins</p>
-    </div>
+      <div class="coin-box">
+        <div class="coins">100 Coins</div>
+        <div class="price">$1.15</div>
+        <button class="buy-btn">Buy</button>
+      </div>
 
-    <div class="total-price">
-      <h2>Total: $<span id="total">0</span></h2>
-    </div>
+      <div class="coin-box">
+        <div class="coins">500 Coins</div>
+        <div class="price">$5.49</div>
+        <button class="buy-btn">Buy</button>
+      </div>
 
-    <button id="purchaseBtn" disabled>Purchase</button>
+      <div class="coin-box">
+        <div class="coins">1000 Coins</div>
+        <div class="price">$10.99</div>
+        <button class="buy-btn">Buy</button>
+      </div>
 
-    <div id="success-message" class="hidden">
-      ✅ Purchase Successful! 🎉
+      <!-- Custom option -->
+      <div class="coin-box custom-box">
+        <div class="coins">Custom</div>
+        <div class="price">
+          <input type="number" id="customInput" placeholder="Enter coins" min="1">
+        </div>
+        <button class="buy-btn">Buy</button>
+      </div>
     </div>
   </div>
 
